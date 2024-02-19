@@ -9,7 +9,7 @@ export default {};
         <div class="logo p-3">
           <img src="../assets/img/logo.png" alt="" />
         </div>
-        <ul class="text-light navbar gap-3 p-3">
+        <ul class="text-light navbar gap-5 p-3 mylink fw-medium">
           <li>Home</li>
           <li>About Us</li>
           <li>Portfolio</li>
@@ -38,18 +38,24 @@ export default {};
           </button>
         </div>
         <div class="clip d-flex justify-content-center mt-5">
-          <img src="../assets/img/middle.png" alt="" />
+          <img src="../assets/img/middle.png" alt="" class="videohead" />
           <div class="roundedicon">
             <i
-            class="fa-solid fa-play fa-lg playicon"
-            style="color: #ffffff"
+              class="fa-solid fa-play fa-lg playicon"
+              style="color: #ffffff"
             ></i>
           </div>
         </div>
       </div>
     </div>
-    <img src="../assets/img/left-man.png" alt="" class="leftmanhead">
-    <img src="../assets/img/right-man.png" alt="" class="rightmanhead">
+    <img src="../assets/img/left-man.png" alt="" class="leftmanhead" />
+    <img src="../assets/img/right-man.png" alt="" class="rightmanhead" />
+    <img src="../assets/img/dots-left.png" alt="" class="dotslefthead" />
+    <img src="../assets/img/dots-right.png" alt="" class="dotsrighthead" />
+    <img src="../assets/img/globe1.png" alt="" class="globe1head" />
+    <img src="../assets/img/globe3.png" alt="" class="globe3head" />
+    <img src="../assets/img/globe2.png" alt="" class="globe2head" />
+    <img src="../assets/img/light.png" alt="" class="lighthead" />
   </header>
 </template>
 
@@ -59,6 +65,7 @@ export default {};
 
 header {
   background-image: url(../assets/img/banner-bg.png);
+
   background-repeat: no-repeat;
   max-width: 100%;
 }
@@ -75,6 +82,9 @@ ul li {
 }
 .titlehead {
   font-size: 80px;
+}
+.mylink {
+  z-index: 1;
 }
 
 .mybtn {
@@ -98,17 +108,53 @@ ul li {
   position: absolute;
   top: 80%;
 }
-.leftmanhead{
+.leftmanhead {
   position: absolute;
+  z-index: 1;
   top: 300px;
   padding: 10px;
   height: 400px;
-  }
-  .rightmanhead{
-    position: absolute;
-    top: 300px;
-    right: 0;
-    padding: 5px;
-    height: 400px;
-  }
+}
+.rightmanhead {
+  z-index: 1;
+  position: absolute;
+  top: 300px;
+  right: 0;
+  padding: 5px;
+  height: 400px;
+}
+.dotslefthead {
+  position: absolute;
+  top: 220px;
+  left: 50px;
+}
+.videohead {
+  z-index: 1;
+}
+.dotsrighthead {
+  position: absolute;
+  top: 150px;
+  right: 50px;
+}
+.globe1head {
+  position: absolute;
+  top: 90px;
+  padding: 20px;
+  left: 200px;
+}
+.globe3head {
+  position: absolute;
+  top: -250px;
+  right: 50%;
+}
+.globe2head {
+  position: absolute;
+  top: 280px;
+  right: 30%;
+}
+.lighthead {
+  position: absolute;
+  top: 100px;
+  right: 15%;
+}
 </style>
