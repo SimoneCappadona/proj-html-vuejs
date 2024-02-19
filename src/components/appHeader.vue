@@ -3,12 +3,15 @@ export default {};
 </script>
 
 <template>
+  <!-- Header with bg img -->
   <header>
     <div class="container">
       <div class="d-flex flex-row justify-content-between">
+        <!-- Logo -->
         <div class="logo p-3">
           <img src="../assets/img/logo.png" alt="" />
         </div>
+        <!-- Link List -->
         <ul class="text-light navbar gap-5 p-3 mylink fw-medium">
           <li>Home</li>
           <li>About Us</li>
@@ -17,11 +20,13 @@ export default {};
           <li>Pricing</li>
           <li>Blog</li>
           <li>Contact</li>
+          <!-- Button -->
           <button class="btn btn-light rounded-pill fw-medium mybtn">
             Get a Quote
           </button>
         </ul>
       </div>
+      <!-- Title and Comments -->
       <div class="text-center mt-5">
         <div class="content fw-bolder fs-4">Imagine, Create, Experience</div>
         <h1 class="titlehead">We Animate With Ninja-Like Precision</h1>
@@ -29,6 +34,7 @@ export default {};
           We are a character-driven animation studio striving to make
           high-quality animations.
         </p>
+        <!-- Button  -->
         <div class="d-flex justify-content-center gap-3 mt-5">
           <button class="btn btn-light rounded-pill mybtn">
             Start a Project
@@ -37,8 +43,9 @@ export default {};
             Portfolio
           </button>
         </div>
+        <!-- Clip with icon play and rounded bg -->
         <div class="clip d-flex justify-content-center mt-5">
-          <img src="../assets/img/middle.png" alt="" class="videohead" />
+          <img src="../assets/img/middle.png" alt="" class="videohead mb-5" />
           <div class="roundedicon">
             <i
               class="fa-solid fa-play fa-lg playicon"
@@ -48,6 +55,7 @@ export default {};
         </div>
       </div>
     </div>
+    <!-- P.Absolute images -->
     <img src="../assets/img/left-man.png" alt="" class="leftmanhead" />
     <img src="../assets/img/right-man.png" alt="" class="rightmanhead" />
     <img src="../assets/img/dots-left.png" alt="" class="dotslefthead" />
@@ -56,6 +64,7 @@ export default {};
     <img src="../assets/img/globe3.png" alt="" class="globe3head" />
     <img src="../assets/img/globe2.png" alt="" class="globe2head" />
     <img src="../assets/img/light.png" alt="" class="lighthead" />
+    <!-- Close header -->
   </header>
 </template>
 
@@ -63,16 +72,17 @@ export default {};
 @use "../assets/style/general.scss";
 @use "../assets/style/partials/variables.scss" as *;
 
+// Header bg
 header {
   background-image: url(../assets/img/banner-bg.png);
-
   background-repeat: no-repeat;
   max-width: 100%;
 }
-
+// Ul/Li Reset
 ul li {
   cursor: pointer;
 }
+
 .content {
   color: $lightorange;
 }
@@ -90,6 +100,7 @@ ul li {
 .mybtn {
   box-shadow: 0px 2px 2px white;
 }
+// Icon
 .playicon {
   border-radius: 50%;
   background-color: $bluepurle;
@@ -102,6 +113,7 @@ ul li {
   left: 14%;
   z-index: 2;
 }
+// Icon
 .roundedicon {
   border-radius: 50%;
   background-color: rgba(77, 54, 220, 0.5);
@@ -112,6 +124,7 @@ ul li {
   top: 80%;
   z-index: 2;
 }
+// Img Left
 .leftmanhead {
   position: absolute;
   z-index: 1;
@@ -119,6 +132,7 @@ ul li {
   padding: 10px;
   height: 400px;
 }
+// Img Right
 .rightmanhead {
   z-index: 1;
   position: absolute;
@@ -127,35 +141,42 @@ ul li {
   padding: 5px;
   height: 400px;
 }
+// Img Left
 .dotslefthead {
   position: absolute;
   top: 220px;
   left: 50px;
 }
+// z-index for central img
 .videohead {
   z-index: 1;
 }
+// Img Right
 .dotsrighthead {
   position: absolute;
   top: 150px;
   right: 50px;
 }
+// Img Left
 .globe1head {
   position: absolute;
   top: 90px;
   padding: 20px;
   left: 200px;
 }
+// Img Top
 .globe3head {
   position: absolute;
   top: -250px;
   right: 50%;
 }
+// Img Right
 .globe2head {
   position: absolute;
   top: 280px;
   right: 30%;
 }
+// Img Right
 .lighthead {
   position: absolute;
   top: 100px;
