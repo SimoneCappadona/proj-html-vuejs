@@ -9,7 +9,7 @@ export default {};
         <div class="logo p-3">
           <img src="../assets/img/logo.png" alt="" />
         </div>
-        <ul class="text-light navbar gap-2 p-3">
+        <ul class="text-light navbar gap-3 p-3">
           <li>Home</li>
           <li>About Us</li>
           <li>Portfolio</li>
@@ -41,13 +41,15 @@ export default {};
           <img src="../assets/img/middle.png" alt="" />
           <div class="roundedicon">
             <i
-              class="fa-solid fa-play fa-lg playicon"
-              style="color: #ffffff"
+            class="fa-solid fa-play fa-lg playicon"
+            style="color: #ffffff"
             ></i>
           </div>
         </div>
       </div>
     </div>
+    <img src="../assets/img/left-man.png" alt="" class="leftmanhead">
+    <img src="../assets/img/right-man.png" alt="" class="rightmanhead">
   </header>
 </template>
 
@@ -57,6 +59,7 @@ export default {};
 
 header {
   background-image: url(../assets/img/banner-bg.png);
+  background-repeat: no-repeat;
   max-width: 100%;
 }
 
@@ -94,6 +97,18 @@ ul li {
   line-height: 65px;
   position: absolute;
   top: 80%;
-
 }
+.leftmanhead{
+  position: absolute;
+  top: 300px;
+  padding: 10px;
+  height: 400px;
+  }
+  .rightmanhead{
+    position: absolute;
+    top: 300px;
+    right: 0;
+    padding: 5px;
+    height: 400px;
+  }
 </style>
