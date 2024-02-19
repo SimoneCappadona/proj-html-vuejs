@@ -92,12 +92,15 @@ ul li {
 }
 .playicon {
   border-radius: 50%;
-  z-index: 1;
   background-color: $bluepurle;
   width: 50px;
   aspect-ratio: 1;
   line-height: 50px;
   cursor: pointer;
+  position: absolute;
+  top: 14%;
+  left: 14%;
+  z-index: 2;
 }
 .roundedicon {
   border-radius: 50%;
@@ -107,6 +110,7 @@ ul li {
   line-height: 65px;
   position: absolute;
   top: 80%;
+  z-index: 2;
 }
 .leftmanhead {
   position: absolute;
