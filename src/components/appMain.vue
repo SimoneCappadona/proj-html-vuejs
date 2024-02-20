@@ -1,15 +1,18 @@
 <script>
-export default {};
+import appTeam from "./appTeam.vue";
+export default {
+  components: { appTeam },
+};
 </script>
 
 <template>
   <!-- Main -->
   <main class="main">
     <!-- Right Image -->
-    <img src="../assets/img/smarttwo.png" alt="" class="mainimg" />
+    <img src="../assets/img/smart.png" alt="" class="mainimg" />
     <!-- Quote -->
     <div class="col-6 text-center maincontent">
-      <p class="mainphara fw-medium">Our Love For Animation</p>
+      <p class="mainphara fw-medium fs-3">Our Love For Animation</p>
       <h2 class="maintitle">We're Storytelling Experts With Creative Smarts</h2>
       <p class="mainquote fw-normal">
         Our Culture inspires the creative and innovative spirit found throughout
@@ -93,7 +96,7 @@ export default {};
     <section class="cardsection mt-5">
       <div class="col-4 mx-auto text-center">
         <!-- Quote -->
-        <p class="outwork fw-medium">Our Works</p>
+        <p class="outwork fw-medium fs-3">Our Works</p>
         <p class="titlepord h2 p-2">Featured Productions</p>
         <p class="quoteprod">
           Here's just a small sample of some of those projects that we're quite
@@ -135,7 +138,7 @@ export default {};
           />
           <!-- Quote -->
           <div class="text-start">
-            <p class="ourprocess fw-medium">Our Process</p>
+            <p class="ourprocess fw-medium fs-3">Our Process</p>
             <h2 class="processtitle">
               Our Process for Your Animation Production
             </h2>
@@ -191,6 +194,16 @@ export default {};
         <img src="../assets/img/smart4.png" alt="" class="ship" />
       </div>
     </section>
+    <section class="teammember">
+      <div class="text-center">
+        <p class="memberpurple fw-medium fs-3">Anidio Magic Team Member</p>
+        <h2 class="membertitle">Let Us Animate Your Project</h2>
+        <p class="memberquote">
+          We create new worlds!Let's collaborate and create
+          engaging,effective,award-widding animations
+        </p>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -220,7 +233,7 @@ export default {};
   position: absolute;
   z-index: 1;
   top: 90%;
-  right: 65%;
+  right: 68%;
 }
 // Margin for title/para
 .maincontent {
@@ -295,6 +308,21 @@ export default {};
   color: $purplegrey;
   text-align: end;
 }
-// Yellow Ship process section image
-
+// Team Member Section
+.teammember {
+  background-image: url(../assets/img/shape.png), url(../assets/img/shape2.png);
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+  margin-top: 200px;
+}
+.memberpurple {
+  color: $bluepurle;
+}
+.membertitle {
+  color: $darkpurple;
+  font-size: 50px;
+}
+.memberquote {
+  color: $darkpurple;
+}
 </style>
