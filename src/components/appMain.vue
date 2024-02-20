@@ -89,6 +89,108 @@ export default {};
         <img src="../assets/img/shape-bottom.png" alt="" class="wavedown" />
       </div>
     </aside>
+    <!-- Our Work section -->
+    <section class="cardsection mt-5">
+      <div class="col-4 mx-auto text-center">
+        <!-- Quote -->
+        <p class="outwork fw-medium">Our Works</p>
+        <p class="titlepord h2 p-2">Featured Productions</p>
+        <p class="quoteprod">
+          Here's just a small sample of some of those projects that we're quite
+          proud of. If you're looking for something specific feel free to get in
+          contact with us.
+        </p>
+      </div>
+      <!-- Card Work -->
+      <div class="container text-center">
+        <div class="row row-cols-2 p-5">
+          <div class="col p-2">
+            <img src="../assets/img/work1.png" alt="" />
+          </div>
+          <div class="col p-2">
+            <img src="../assets/img/work2.png" alt="" />
+          </div>
+          <div class="col p-2">
+            <img src="../assets/img/work3.png" alt="" />
+          </div>
+          <div class="col p-2">
+            <img src="../assets/img/work4.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- Button -->
+      <div class="text-center">
+        <button class="btn btn-light border">See Our Work</button>
+      </div>
+    </section>
+    <!-- Process section -->
+    <section class="process">
+      <div class="container text-center">
+        <div class="d-flex justify-content-center">
+          <!-- Rocket image -->
+          <img
+            src="../assets/img/process-thumb.png"
+            alt=""
+            class="processimg"
+          />
+          <!-- Quote -->
+          <div class="text-start">
+            <p class="ourprocess fw-medium">Our Process</p>
+            <h2 class="processtitle">
+              Our Process for Your Animation Production
+            </h2>
+            <p class="quoteprocess fw-medium">
+              We have an effective process for working on animation
+            </p>
+            <div class="row gap-4">
+              <div class="col border text-center rounded-4 p-5">
+                <p class="numberprocess fw-bold">4</p>
+                <!-- Card Quote and image -->
+                <img
+                  src="../assets/img/process2.png"
+                  class="mx-auto p-2"
+                  alt=""
+                />
+                <p class="fs-5 fw-medium">Pre- Production</p>
+                <p>
+                  We'll take your idea and create a technical script wich
+                  consists of action notes and animation descriptions
+                </p>
+              </div>
+              <div class="col border text-center rounded-4 p-5">
+                <p class="numberprocess fw-bold">1</p>
+                <!-- Card Quote and image -->
+                <img
+                  src="../assets/img/process1.png"
+                  class="mx-auto p-2"
+                  alt=""
+                />
+                <p class="fs-5 fw-medium">Scripting</p>
+                <p>
+                  We'll take your idea and create a technical script wich
+                  consists of action notes and animation descriptions
+                </p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-start p-5 gap-2">
+              <button
+                type="button"
+                class="btn btn-outline-secondary rounded-circle"
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary rounded-circle"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <img src="../assets/img/smart4.png" alt="" class="ship" />
+      </div>
+    </section>
   </main>
 </template>
 
@@ -156,4 +258,43 @@ export default {};
   height: 420px;
   z-index: 0;
 }
+
+// Work card section
+.outwork {
+  color: $bluepurle;
+}
+.titlepord,
+.quoteprod {
+  color: $darkpurple;
+}
+// Process section
+.process {
+  margin-top: 200px;
+}
+// Image right
+.processimg {
+  position: relative;
+  right: 40%;
+  height: 800px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+// Quote process section
+.ourprocess {
+  color: $bluepurle;
+}
+.processtitle {
+  color: $darkpurple;
+  font-size: 50px;
+}
+.quoteprocess {
+  color: $darkpurple;
+}
+// process quote image left
+.numberprocess {
+  color: $purplegrey;
+  text-align: end;
+}
+// Yellow Ship process section image
+
 </style>
