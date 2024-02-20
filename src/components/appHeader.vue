@@ -9,7 +9,7 @@ export default {};
       <div class="d-flex flex-row justify-content-between">
         <!-- Logo -->
         <div class="logo p-3">
-          <img src="../assets/img/logo.png" alt="" />
+          <img src="../assets/img/logo.png" alt=""/>
         </div>
         <!-- Link List -->
         <ul class="text-light navbar gap-5 p-3 mylink fw-medium">
@@ -85,10 +85,12 @@ ul li {
 
 .content {
   color: $lightorange;
+  z-index: 2;
 }
 .titlehead,
 .undertitle {
   color: $white;
+
 }
 .titlehead {
   font-size: 80px;
@@ -96,6 +98,7 @@ ul li {
 .mylink {
   z-index: 1;
 }
+
 
 .mybtn {
   box-shadow: 0px 2px 2px white;
