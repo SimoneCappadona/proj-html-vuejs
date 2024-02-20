@@ -1,5 +1,17 @@
 <script>
-export default {};
+export default {
+  data() {
+    return {
+    };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    },
+  },
+  }
+
+
 </script>
 
 <template>
@@ -44,7 +56,18 @@ export default {};
         Join our newsletter for tips on how to elevate your brand through
         storytelling
       </p>
-
+      <div class="input-group d-flex mx-auto w-50 mb-5">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="name@example.com"
+          aria-label="name@example.com"
+          aria-describedby="button-addon2"
+        />
+        <button class="btn btn-light" type="button" id="button-addon2">
+          Button
+        </button>
+      </div>
       <div class="wavediv">
         <img src="../assets/img/shape-bottom.png" alt="" class="wavedown" />
       </div>
@@ -68,20 +91,20 @@ export default {};
             <li>Contact</li>
           </ul>
         </div>
-        <div class="footerquote d-flex justify-content-between">
+        <div class="footerquote d-flex justify-content-between fw-medium">
           <p>
             Copyright
             <span><i class="fa-regular fa-copyright fa-sm"></i></span>2022
             <span class="coloredpurple">Softivus.</span>All rights reserved.
           </p>
-          <div class="social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
+          <div class="d-flex gap-3">
+            <i class="fa-brands fa-facebook-f social"></i>
+            <i class="fa-brands fa-twitter border-1 social"></i>
+            <i class="fa-brands fa-instagram border-1 social"></i>
           </div>
         </div>
       </div>
-      <div class="arrowup">
+      <div class="arrowup" @click="scrollToTop">
         <i class="fa-solid fa-arrow-up arrowed"></i>
       </div>
     </section>
@@ -126,6 +149,9 @@ export default {};
 .emailquote {
   color: $white;
 }
+.emailquote {
+  margin-bottom: 150px;
+}
 .infos {
   margin-top: 100px;
 }
@@ -136,6 +162,19 @@ export default {};
   border-bottom: 0.5px solid $purplegrey;
   margin: 20px;
   padding: 5px;
+}
+.coloredpurple {
+  color: $bluepurle;
+}
+.social {
+  border: 0.5px solid $purplegrey;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 25px;
+  height: 50px;
+  aspect-ratio: 1;
+  cursor: pointer;
 }
 .arrowup {
   text-align: right;
@@ -148,9 +187,12 @@ export default {};
   color: $white;
   cursor: pointer;
   height: 40px;
-  font-size: 20px;
+  font-size: 20 px;
   line-height: 40px;
   text-align: center;
   aspect-ratio: 1;
+}
+.form-control {
+  width: 50%;
 }
 </style>
