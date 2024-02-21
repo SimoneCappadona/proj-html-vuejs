@@ -73,6 +73,7 @@ export default defineComponent({
 
           <video
             autoplay
+            loop
             width="900px"
             height="100%"
             class="rounded-5 myvids"
