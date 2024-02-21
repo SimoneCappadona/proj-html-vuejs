@@ -195,14 +195,15 @@ export default {
       </div>
     </section>
     <section class="teammember">
-      <div class="text-center">
+      <div class="text-center ">
         <p class="memberpurple fw-medium fs-3">Anidio Magic Team Member</p>
         <h2 class="membertitle">Let Us Animate Your Project</h2>
-        <p class="memberquote">
+        <p class="memberquote ">
           We create new worlds!Let's collaborate and create
           engaging,effective,award-widding animations
         </p>
       </div>
+      <appTeam />
     </section>
   </main>
 </template>
@@ -324,5 +325,6 @@ export default {
 }
 .memberquote {
   color: $darkpurple;
+  margin-bottom: 100px;
 }
 </style>

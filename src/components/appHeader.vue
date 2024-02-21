@@ -1,5 +1,24 @@
 <script>
-export default {};
+import { defineComponent } from 'vue'
+  import { VideoPlayer } from '@videojs-player/vue'
+  import 'video.js/dist/video-js.css'
+export default defineComponent({
+  data() {
+    return {
+      showImage: true,
+      showVideo: false,
+    };
+  },
+  methods: {
+    playButton() {
+      this.showVideo = true;
+      this.showImage = false;
+    },
+  },
+  components: {
+    VideoPlayer
+  }
+});
 </script>
 
 <template>
@@ -9,7 +28,7 @@ export default {};
       <div class="d-flex flex-row justify-content-between">
         <!-- Logo -->
         <div class="logo p-3">
-          <img src="../assets/img/logo.png" alt=""/>
+          <img src="../assets/img/logo.png" alt="" />
         </div>
         <!-- Link List -->
         <ul class="text-light navbar gap-5 p-3 mylink fw-medium">
@@ -45,10 +64,27 @@ export default {};
         </div>
         <!-- Clip with icon play and rounded bg -->
         <div class="clip d-flex justify-content-center mt-5">
-          <img src="../assets/img/middle.png" alt="" class="videohead mb-5" />
+          <img
+            src="../assets/img/middle.png"
+            alt=""
+            class="videohead mb-5"
+            v-if="showImage"
+          />
+          <video-player
+            src="../assets/img/video/astronaut_-_88140 (540p).webm"
+            class="cliphead rounded-5 video-js"
+            type="video.webm"
+            v-if="showVideo"
+            controls
+            :loop="true"
+            :volume="0.2"
+            @play="playButton()"   
+            @pause="playButton()"     
+          />
           <div class="roundedicon">
             <i
               class="fa-solid fa-play fa-lg playicon"
+              @click="playButton()"
               style="color: #ffffff"
             ></i>
           </div>
@@ -90,7 +126,6 @@ ul li {
 .titlehead,
 .undertitle {
   color: $white;
-
 }
 .titlehead {
   font-size: 80px;
@@ -98,7 +133,6 @@ ul li {
 .mylink {
   z-index: 1;
 }
-
 
 .mybtn {
   box-shadow: 0px 2px 2px white;
@@ -184,5 +218,7 @@ ul li {
   position: absolute;
   top: 100px;
   right: 15%;
+}
+.cliphead {
 }
 </style>

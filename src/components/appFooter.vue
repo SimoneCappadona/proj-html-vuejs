@@ -168,6 +168,7 @@ export default {
 }
 .social {
   border: 0.5px solid $purplegrey;
+  color: $bluepurle;
   border-radius: 50%;
   line-height: 50px;
   text-align: center;
