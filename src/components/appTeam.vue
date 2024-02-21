@@ -103,7 +103,7 @@ export default {
   <div class="container">
     <appMember :card="cards[cardIndex]" />
     <div class="d-flex gap-3 justify-content-center">
-      <button class="btn btn-outline-secondary rounded-5" @click="prevCard()">
+      <button class="btn btn-outline-secondary rounded-5 rounded-circle" @click="prevCard()">
         <i class="fa-solid fa-arrow-left"></i>
       </button>
       <div
@@ -113,7 +113,7 @@ export default {
       >
         <i class="fa-solid fa-circle fa-xs" :class="i == cardIndex ? 'active' : ''"></i>
       </div>
-      <button class="btn btn-outline-secondary rounded-5" @click="nextCard()">
+      <button class="btn btn-outline-secondary rounded-5 rounded-circle" @click="nextCard()">
         <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>
@@ -140,5 +140,12 @@ export default {
 }
 .active {
   color: $lightorange;
+}
+// Hover
+.rounded-circle {
+  background-color: white;
+  &:hover {
+    background-color: #ff7a1f !important;  
+  }
 }
 </style>

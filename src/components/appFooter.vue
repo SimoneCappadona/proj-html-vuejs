@@ -1,17 +1,14 @@
 <script>
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   methods: {
     scrollToTop() {
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     },
   },
-  }
-
-
+};
 </script>
 
 <template>
@@ -65,7 +62,7 @@ export default {
           aria-describedby="button-addon2"
         />
         <button class="btn btn-light" type="button" id="button-addon2">
-          Button
+          Submit
         </button>
       </div>
       <div class="wavediv">
@@ -195,5 +192,11 @@ export default {
 }
 .form-control {
   width: 50%;
+}
+
+// Hover
+.social:hover {
+  background-color: $lightorange;
+  color: white;
 }
 </style>

@@ -176,17 +176,11 @@ export default {
               </div>
             </div>
             <div class="d-flex justify-content-start p-5 gap-2">
-              <button
-                type="button"
-                class="btn btn-outline-secondary rounded-circle"
-              >
+              <button type="button" class="btn btn-outline-secondary rounded-circle">
                 <i class="fa-solid fa-arrow-left"></i>
               </button>
-              <button
-                type="button"
-                class="btn btn-outline-secondary rounded-circle"
-              >
-                <i class="fa-solid fa-arrow-right"></i>
+              <button type="button" class="btn btn-outline-secondary rounded-circle">
+                <i class="fa-solid fa-arrow-right "></i>
               </button>
             </div>
           </div>
@@ -195,10 +189,10 @@ export default {
       </div>
     </section>
     <section class="teammember">
-      <div class="text-center ">
+      <div class="text-center">
         <p class="memberpurple fw-medium fs-3">Anidio Magic Team Member</p>
         <h2 class="membertitle">Let Us Animate Your Project</h2>
-        <p class="memberquote ">
+        <p class="memberquote">
           We create new worlds!Let's collaborate and create
           engaging,effective,award-widding animations
         </p>
@@ -326,5 +320,13 @@ export default {
 .memberquote {
   color: $darkpurple;
   margin-bottom: 100px;
+}
+
+// Hover
+.rounded-circle {
+  background-color: white;
+  &:hover {
+    background-color: #ff7a1f !important;  
+  }
 }
 </style>

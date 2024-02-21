@@ -1,7 +1,7 @@
 <script>
-import { defineComponent } from 'vue'
-  import { VideoPlayer } from '@videojs-player/vue'
-  import 'video.js/dist/video-js.css'
+import { defineComponent } from "vue";
+import { VideoPlayer } from "@videojs-player/vue";
+import "video.js/dist/video-js.css";
 export default defineComponent({
   data() {
     return {
@@ -16,8 +16,8 @@ export default defineComponent({
     },
   },
   components: {
-    VideoPlayer
-  }
+    VideoPlayer,
+  },
 });
 </script>
 
@@ -31,14 +31,14 @@ export default defineComponent({
           <img src="../assets/img/logo.png" alt="" />
         </div>
         <!-- Link List -->
-        <ul class="text-light navbar gap-5 p-3 mylink fw-medium">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Portfolio</li>
-          <li>Out Process</li>
-          <li>Pricing</li>
-          <li>Blog</li>
-          <li>Contact</li>
+        <ul class="navbar gap-5 p-3 mylink fw-medium">
+          <li class="homelink">Home</li>
+          <li class="aboutlink">About Us</li>
+          <li class="portfoliolink">Portfolio</li>
+          <li class="processlink">Out Process</li>
+          <li class="pricinglink">Pricing</li>
+          <li class="bloglink">Blog</li>
+          <li class="contactlink">Contact</li>
           <!-- Button -->
           <button class="btn btn-light rounded-pill fw-medium mybtn">
             Get a Quote
@@ -70,20 +70,25 @@ export default defineComponent({
             class="videohead mb-5"
             v-if="showImage"
           />
-          <video-player
-            src="../assets/img/video/astronaut_-_88140 (540p).webm"
-            class="cliphead rounded-5 video-js"
-            type="video.webm"
+
+          <video
+            autoplay
+            width="900px"
+            height="100%"
+            class="rounded-5 myvids"
             v-if="showVideo"
-            controls
-            :loop="true"
-            :volume="0.2"
-            @play="playButton()"   
-            @pause="playButton()"     
-          />
-          <div class="roundedicon">
+            @play="playButton()"
+            @pause="playButton()"
+          >
+            <source
+              src="../assets/img/video/astronaut_-_88140 (Original)1.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div class="roundedicon" v-if="showImage">
             <i
               class="fa-solid fa-play fa-lg playicon"
+              v-if="showImage"
               @click="playButton()"
               style="color: #ffffff"
             ></i>
@@ -131,11 +136,14 @@ ul li {
   font-size: 80px;
 }
 .mylink {
+  color: white;
   z-index: 1;
 }
-
+.myvids{
+  z-index: 3;
+}
 .mybtn {
-  box-shadow: 0px 2px 2px white;
+  box-shadow: 0px 3px 3px rgba($color: #ffffff, $alpha: 0.5);
 }
 // Icon
 .playicon {
@@ -219,6 +227,18 @@ ul li {
   top: 100px;
   right: 15%;
 }
-.cliphead {
+// Hover
+.mybtn:hover {
+  background-color: #311852 !important;
+  color: white !important;
+}
+.contactlink:hover,
+.bloglink:hover,
+.pricinglink:hover,
+.processlink:hover,
+.portfoliolink:hover,
+.aboutlink:hover,
+.homelink:hover {
+  color: $lightorange;
 }
 </style>
